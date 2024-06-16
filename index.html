@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-UA-Compatable" content="IE=edge">
+    <meta name="Viewport" content="width= device-width, initial-scale= 1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/192afda0f8.js" crossorigin="anonymous"></script>
+    
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo.png" class="logo">
+                <ul>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <h1>Hi, I'm <span>Saheb Singh </span></h1>
+                <p>3<sup>rd</sup> year Computer Science Student</p>
+            </div>
+        </div>
+    </div>
+
+  <!------------about----->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p class="about-text">Hey! I'm Saheb Singh Arora, a third-year Computer Science student. With a keen interest in web development and coding, I've previously interned as a Java Developer, fueling my passion for the tech industry. Currently seeking opportunities to apply my skills to innovative projects, I'm excited to connect and collaborate on exciting ventures. Let's build something great together!
+</p>
+            </div>
+            <div class="about-col-1">
+                <img src="images/About.jpeg" alt="About Me">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <!------------------Portfolio-------------------->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Profile</h1>
+            <div class="work-list">
+                <div class="tab-titles">
+                    <p class="tab-links active-links" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>    
+                </div>
+                
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span><b>Programming Languages</b></span><br>Java<br>Python<br>C<br>C++ <br> JavaScript</li>
+                         <li><span><b>Web Development</b></span><br>HTML<br>CSS</li>
+                        <li><span><b>Operating Systems</b></span><br>Mac OS<br>Linux<br>Microsoft Windows<br>Android<br>iOS</li>
+                         <li><span><b>Web Development</b></span><br>HTML<br>CSS</li>
+                    </ul>
+                </div>
+                
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span><b>Java Developer Intern</b></span><br>Immortal Computer Lab<br>(May 2022-August 2022)</li>            
+                    </ul>
+                </div>
+                
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span><b>Bachelor of Computer Science</b></span><br>University Of New Brunswick<br>(September 2022 - Present)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+<!-----------------contact--------------------------->
+	<div id="contact">
+		<div class="container">
+			<div class="row">
+				<div class="contact-left">
+					<h1 class="sub-title">Contact Me </h1>
+					<p><i class="fa-solid fa-envelope"></i> sahebsa.29@unb.ca</p>
+					<div class="social-icons">
+						<a href="https://www.linkedin.com/in/saheb-singh-arora-9b8135257/"><i class="fa-brands fa-linkedin"></i></a>
+						<a href="https://github.com/sahebsa"><i class="fa-brands fa-github"></i></a>
+						<a href="https://www.instagram.com/saheb_sa/"><i class="fa-brands fa-instagram"></i></a>						
+					</div>
+					
+					<a href="images/my-cv.pdf" download class="btn btn2">Download CV </a>
+					
+				</div>
+				<div class="contact-right"></div>
+					<form>
+						<input type="text" name="Name" placeholder="Your Name" required>
+						<input type="email" name="Email" placeholder="Your Email" required>
+						<textarea name="Message" rows="6" placeholder="Your Message"></textarea> 
+						<button type="submit" class="btn btn2">Submit</button>
+					</form>
+					<span id="submit-msg" style="display: none;">Thanks for submitting!</span>
+
+			</div>
+		</div>
+		
+		<div class="copyright">
+			<p><i class="fa-solid fa-copyright"></i> Copyright @SahebSingh  </p>
+		</div>
+		
+	</div>
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabContents = document.getElementsByClassName("tab-contents");
+        
+        function opentab(tabname) {
+            var currentTab = document.getElementById(tabname);
+            var currentLink = event.currentTarget;
+
+            if (currentTab.classList.contains("active-tab")) {
+                currentTab.classList.remove("active-tab");
+                currentLink.classList.remove("active-links");
+            } else {
+                for (var tablink of tablinks) {
+                    tablink.classList.remove("active-links");
+                }
+                for (var tabContent of tabContents) {
+                    tabContent.classList.remove("active-tab");
+                }
+                currentLink.classList.add("active-links");
+                currentTab.classList.add("active-tab");
+            }
+        }
+    </script>
+
+</body>
+</html>
