@@ -360,3 +360,95 @@ form .btn2{
 	margin-top: -70px;
 	display: none;
 }
+
+/* Add mobile responsive styles at the end of your existing CSS file */
+
+@media screen and (max-width: 768px) {
+    /* Adjustments for smaller screens */
+    body {
+        font-size: 14px; /* Adjust base font size for smaller screens */
+    }
+
+    /* Header adjustments */
+    #header {
+        height: auto;
+        padding: 80px 0; /* Adjust padding as needed */
+        text-align: center;
+    }
+
+    .header-text {
+        margin-top: 10%;
+        text-align: center;
+    }
+
+    .header-text h1 {
+        font-size: 40px; /* Adjust font size */
+        margin-top: 10%; /* Adjust margin as needed */
+    }
+
+    .logo {
+        width: 120px; /* Adjust logo size */
+    }
+
+    nav ul {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    nav ul li {
+        display: inline-block;
+        margin: 10px 20px;
+    }
+
+    nav ul li a {
+        font-size: 16px; /* Adjust font size */
+    }
+
+    /* About section adjustments */
+    .about-col-1,
+    .about-col-2 {
+        flex-basis: 100%;
+        text-align: center;
+        margin-left: 0; /* Remove left margin */
+    }
+
+    .about-col-1 img {
+        max-width: 100%; /* Ensure image resizes properly */
+        margin-top: 20px; /* Adjust spacing */
+    }
+
+    /* Portfolio section adjustments */
+    .profile-content {
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center; /* Center align items */
+    }
+
+    .work-list {
+        min-width: 100%; /* Full width for tab content */
+    }
+
+    .profile-photo {
+        margin-top: 50px; /* Adjust margin */
+        max-width: 100%; /* Ensure image resizes properly */
+    }
+
+    .layer {
+        padding: 20px; /* Adjust padding */
+    }
+
+    .tab-titles {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .tab-links {
+        margin: 10px; /* Adjust margin */
+    }
+
+    /* Contact section adjustments */
+    .contact-left,
+    .contact-right {
+        flex-basis: 100%;
+    }
+}
+
