@@ -170,6 +170,13 @@ nav ul li a:hover::after {
     transition: transform 0.5s;
 }
 
+@media (max-width: 768px) {
+    .profile-photo img {
+        max-width: 100%; /* Adjusts image size for smaller screens */
+        width: auto; /* Allows image to shrink as needed */
+    }
+}
+
 .layer {
     width: 100%; 
     height: 0;
