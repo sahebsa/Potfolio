@@ -107,7 +107,7 @@ nav ul li a:hover::after {
     width: 100%;
     max-width: 200px; 
     border-radius: 15px;
-    margin-top: 0; 
+    margin-top: 50; 
 }
 
 .about-col-2 {
@@ -136,6 +136,89 @@ nav ul li a:hover::after {
     color: #fff;
     min-height: 100vh; 
     overflow: hidden; 
+}
+
+.profile-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.work-list {
+    flex: 1;
+    min-width: 60%;
+}
+
+.profile-photo {
+    flex: 0 0 35%;
+    max-width: 35%;
+    margin-top: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.profile-photo img {
+    width: 125%; 
+    height: auto;
+    border-radius: 10px;
+    position: relative;
+    z-index: 0; 
+    transition: transform 0.5s;
+}
+
+.layer {
+    width: 100%; 
+    height: 0;
+    background: linear-gradient(rgba(0,0,0,0.6), #ff004f);
+    border-radius: 10px;
+    position: absolute;
+    bottom: 0; 
+    left: 0;
+    z-index: 0; 
+    pointer-events: none;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end; 
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px; 
+    text-align: center;
+    font-size: 14px;
+    transition: height 0.5s, padding 0.5s;
+    transform: translateY(100%); 
+}
+
+.layer h3 {
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.layer a {
+    margin-top: 20px;
+    color: #ff004f;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 40px;
+    background: #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+
+.profile-photo:hover img{
+	transform: scale(1.1);
+}
+
+.profile-photo:hover .layer{
+	height: 100%;
+	padding: 40px;
+	transform: translateY(0);
 }
 
 .tab-titles {
@@ -185,6 +268,7 @@ nav ul li a:hover::after {
 .tab-contents.active-tab {
     display: block;
 }
+
 
 /*----------------Contact--------------- */
 
@@ -275,4 +359,104 @@ form .btn2{
 	color:#61b752;
 	margin-top: -70px;
 	display: none;
+}
+
+
+/*------------------- Mobile compatible----------------- /*
+
+/* General adjustments for smaller screens */
+@media screen and (max-width: 768px) {
+    /* Header adjustments */
+    #header {
+        height: auto;
+        padding: 80px 0; /* Adjust as needed */
+        text-align: center; /* Center align header text */
+    }
+
+    .header-text {
+        margin-top: 10%; /* Adjust vertical spacing */
+        text-align: center;
+    }
+
+    .header-text h1 {
+        font-size: 40px; /* Adjust font size */
+        margin-top: 10%; /* Adjust vertical spacing */
+    }
+
+    .logo {
+        width: 120px; /* Adjust logo size */
+    }
+
+    nav ul {
+        text-align: center; /* Center align navigation links */
+        margin-top: 20px;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    nav ul li a {
+        font-size: 16px; /* Adjust font size */
+    }
+
+    /* About section adjustments */
+    .about-col-1 {
+        flex-basis: 100%;
+        margin-bottom: 20px; /* Adjust spacing */
+    }
+
+    .about-col-2 {
+        flex-basis: 100%;
+        margin-left: 0; /* Remove left margin */
+        text-align: center;
+    }
+
+    .about-col-1 img {
+        max-width: 100%; /* Ensure image resizes properly */
+    }
+
+    /* Portfolio section adjustments */
+    .profile-content {
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center; /* Center align items */
+    }
+
+    .work-list {
+        min-width: 100%; /* Full width for tab content */
+    }
+
+    .profile-photo {
+        margin-top: 50px; /* Adjust margin */
+        max-width: 100%; /* Ensure image resizes properly */
+    }
+
+    .layer {
+        padding: 20px; /* Adjust padding */
+    }
+
+    .tab-titles {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .tab-links {
+        margin: 10px; /* Adjust margin */
+    }
+
+    /* Contact section adjustments */
+    .contact-left,
+    .contact-right {
+        flex-basis: 100%; /* Full width for contact columns */
+    }
+
+    .social-icons {
+        text-align: center; /* Center align social icons */
+    }
+
+    .btn {
+        width: 100%; /* Full width button */
+        text-align: center; /* Center align button text */
+    }
 }

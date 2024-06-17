@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="x-UA-Compatable" content="IE=edge">
-    <meta name="Viewport" content="width= device-width, initial-scale= 1.0">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/192afda0f8.js" crossorigin="anonymous"></script>
@@ -46,28 +46,30 @@
 
 
     <!------------------Portfolio-------------------->
-    <div id="portfolio">
-        <div class="container">
-            <h1 class="sub-title">My Profile</h1>
+   
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Profile</h1>
+        <div class="profile-content">
             <div class="work-list">
                 <div class="tab-titles">
                     <p class="tab-links active-links" onclick="opentab('skills')">Skills</p>
                     <p class="tab-links" onclick="opentab('experience')">Experience</p>
-                    <p class="tab-links" onclick="opentab('education')">Education</p>    
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
                 </div>
                 
                 <div class="tab-contents active-tab" id="skills">
                     <ul>
                         <li><span><b>Programming Languages</b></span><br>Java<br>Python<br>C<br>C++ <br> JavaScript</li>
-                         <li><span><b>Web Development</b></span><br>HTML<br>CSS</li>
+                        <li><span><b>Web Development</b></span><br>HTML<br>CSS</li>
                         <li><span><b>Operating Systems</b></span><br>Mac OS<br>Linux<br>Microsoft Windows<br>Android<br>iOS</li>
-                         <li><span><b>Web Development</b></span><br>HTML<br>CSS</li>
+                        <li><span><b>Web Development</b></span><br>HTML<br>CSS</li>
                     </ul>
                 </div>
                 
                 <div class="tab-contents" id="experience">
                     <ul>
-                        <li><span><b>Java Developer Intern</b></span><br>Immortal Computer Lab<br>(May 2022-August 2022)</li>            
+                        <li><span><b>Java Developer Intern</b></span><br>Immortal Computer Lab<br>(May 2022-August 2022)</li>
                     </ul>
                 </div>
                 
@@ -77,8 +79,23 @@
                     </ul>
                 </div>
             </div>
+            <div class="profile-photo">
+                <a href="https://github.com/sahebsa" target="_blank">
+                    <img src="images/GIT.jpg" alt="Profile Photo">
+                </a>
+                <div class="layer">
+                    <h3>My Projects</h3>
+                    <p>It will redirect you to my GitHub profile, where you can find my personal projects.</p>
+                    <a href="https://github.com/sahebsa" class="btn4" target="_blank">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
+</div>
+
+
     
 <!-----------------contact--------------------------->
 	<div id="contact">
